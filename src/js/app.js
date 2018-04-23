@@ -39,21 +39,28 @@ function initMap() {
           zoom: 12,
           center: uluruDaszyna
         });
+        //Markre's Icon
+        var florist = '../icons/florist_small.png';
+        var home = '../icons/home_big.png';
         var markerNedz = new google.maps.Marker({
           position: uluruNedzerzew,
-          map: map
+          map: map,
+          icon: home
         });
         var markerWit = new google.maps.Marker({
           position: uluruWitonia,
-          map: map
+          map: map,
+          icon: florist
         });
         var markerGrab = new google.maps.Marker({
           position: uluruGrabow,
-          map: map
+          map: map,
+          icon: florist
         });
         var markerDasz = new google.maps.Marker({
           position: uluruDaszyna,
-          map: map
+          map: map,
+          icon: florist
         });
       }
 

@@ -1,0 +1,129 @@
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+nav {
+  background-color: rgba(222, 222, 222, 0.6);
+  border-bottom: 1px solid #d5d5d5; }
+
+h1 {
+  font-size: 5vw; }
+
+.big-font {
+  font-size: 9vw; }
+
+.cover {
+  background: url(http://www.wypozyczalniaslupca.pl/images/overlay.png);
+  height: 100%;
+  width: 100%; }
+
+#top {
+  background: #242424 url(../img/field-main.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #d5d5d5;
+  padding: 0px;
+  min-width: 100%; }
+
+#about {
+  max-width: 950px;
+  margin: auto; }
+
+#offer {
+  max-width: 950px;
+  margin: auto; }
+
+.main-content {
+  padding: 40px;
+  padding-top: 9em; }
+
+@media (min-width: 300px) and (max-width: 1024px) {
+  .main-content {
+    padding-top: 14em; } }
+
+.jumbotron {
+  height: 100vh; }
+
+.card {
+  border: none;
+  align-items: center; }
+  .card img {
+    min-height: 250px;
+    max-height: 250px;
+    max-width: 450px; }
+
+#map {
+  height: 450px;
+  width: 100%; }
+
+#carouselShop {
+  max-width: 900px; }
+  #carouselShop img {
+    position: relative;
+    max-height: 490px; }
+
+.navbar-side {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid #ccc;
+  background-color: #f7f7f9;
+  overflow-y: scroll;
+  z-index: 1000;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease; }
+
+@media (min-width: 200px) and (max-width: 500px) {
+  .navbar-side {
+    width: 60%; } }
+
+@media (min-width: 501px) and (max-width: 1023px) {
+  .navbar-side {
+    width: 40%; } }
+
+@media (min-width: 1024px) {
+  .navbar-side {
+    width: 25%; } }
+
+.navbar-side-item {
+  padding: 1.5rem 0;
+  margin: 0;
+  border-bottom: 2px solid #ccc;
+  height: 5rem;
+  display: flex;
+  align-items: center; }
+  .navbar-side-item a {
+    color: black; }
+
+.reveal {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease; }
+
+.side-link {
+  padding-left: 2rem; }
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 990; }
+
+.panel:target {
+  margin-top: 0%;
+  background-color: #ffcb00; }

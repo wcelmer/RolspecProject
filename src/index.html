@@ -7,6 +7,9 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:200" rel="stylesheet">
         <link rel="stylesheet" href="/css/bootstrap.css">
         <link rel="stylesheet" href="/css/styles.css">
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvGoZdiqt85NOpYmF_teYbhm-noHwqqAc&callback=initMap">
+        </script>
     </head>
 
   <body>
@@ -61,14 +64,14 @@
             <h1 class="mb-3 mt-3 display-4">OFERTA</h1>
             <span>__________ __ __________</span>
             <div class="row mt-4 d-flex justify-content-around">
-              <div class="card mb-3 col-md-3 pt-3 col-sm-12 col-xs-12 col-md-5 col-lg-4">
+              <div id="chemics" class="card mb-3 col-md-3 pt-3 col-sm-12 col-xs-12 col-md-5 col-lg-4">
                 <img class="card-img-top" src="../img/chemics.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Środki ochrony roślin</h5>
                   <p class="card-text">Rolspec to profesjonalny dystrybutor środków ochrony roślin. Współpracujemy z największymi producentami tego typu środków, co pozwala nam oferować wszystkim Klientom innowacyjne i sprawdzone produkty w przystępnej cenie. Zapewniamy fachowe doradztwo w kwestii ich doboru oraz optymalnego wykorzystania w celu zagwarantowania maksymalnej ochrony upraw i zwiększenia zysku.</p>
                 </div>
               </div>
-              <div class="card mb-3 col-md-3 pt-3 col-sm-12 col-xs-12 col-md-5 col-lg-4">
+              <div id="grounds" class="card mb-3 col-md-3 pt-3 col-sm-12 col-xs-12 col-md-5 col-lg-4">
                 <img class="card-img-top" src="../img/ground.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Nawozy</h5>
@@ -76,7 +79,7 @@
                                       Pozwala to optymalnie wykorzystać zawarte w nawozach substancje w celu zwiększenia jakości i wysokości plonów. W naszej ofercie znajdą Państwo szeroki wybór nawozów pojedynczych, wieloskładnikowych i dolistnych oraz wysokiej klasy.</p>
                 </div>
               </div>
-              <div class="card mb-3 col-md-3 pt-3 col-sm-12 col-xs-12 col-md-5 col-lg-4">
+              <div id="seeds" class="card mb-3 col-md-3 pt-3 col-sm-12 col-xs-12 col-md-5 col-lg-4">
                 <img class="card-img-top" src="../img/seeds.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Nasiona</h5>
@@ -132,7 +135,7 @@
                 </div>
               </div>
       <!-- PLACES -->
-      <div id="places" class="mt-4 mb-4 text-center">
+      <div id="places" class="mb-4 text-center">
             <h1 class="display-4">NASZE PLACÓWKI</h1>
             <span>__________ __ __________</span>
             <!--MAPY GOOGLE -->
@@ -147,7 +150,7 @@
               <div class="card-body">
                 <h3 class="card-title">SIEDZIBA FIRMY ROLSPEC</h5>
                 <p class="card-text">Nędzerzew 12 <br> 99-335 Witonia <br> E-mail: rolspec@poczta.onet.pl </p>
-                <a href="#" class="btn btn-success">tel: 24 356 43 22</a>
+                <a href="tel:+48243564322" class="btn btn-success">tel: 24 356 43 22</a>
               </div>
             </div>
           </div>
@@ -156,7 +159,7 @@
               <div class="card-body">
                 <h3 class="card-title">SKLEP OGRODNICZY WITONIA</h5>
                 <p class="card-text">ul. Centralna 1, 99-335 Witonia</p>
-                <a href="#" class="btn btn-success">tel./fax: 24 356 40 30</a>
+                <a href="tel:+48243564030" class="btn btn-success">tel./fax: 24 356 40 30</a>
               </div>
             </div>
           </div>
@@ -165,7 +168,7 @@
               <div class="card-body">
                 <h3 class="card-title">SKLEP OGRODNICZY DASZYNA</h5>
                 <p class="card-text">99-107 Daszyna 36</p>
-                <a href="#" class="btn btn-success">tel: 792 425 881</a>
+                <a href="tel:+48792425881" class="btn btn-success">tel: 792 425 881</a>
               </div>
             </div>
           </div>
@@ -174,13 +177,11 @@
               <div class="card-body">
                 <h3 class="card-title">SKLEP OGRODNICZY GRABÓW</h5>
                 <p class="card-text">pl. Kościuszki 16, 99-150 Grabów</p>
-                <a href="#" class="btn btn-success">tel./fax: 63 271 32 01</a>
+                <a href="tel:+48632713201" class="btn btn-success">tel./fax: 63 271 32 01</a>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
       <!-- FOOTER -->
       <footer class="page-footer font-small dark pt-4 mt-4">
@@ -195,14 +196,9 @@
     <!-- SCRIPTS -->
 
     <script src="/js/jquery.min.js"></script>
-    <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvGoZdiqt85NOpYmF_teYbhm-noHwqqAc&callback=initMap">
-        </script>
-    <script src="/js/app.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-
-
+    <script src="/js/app.js"></script>
 
   </body>
 </html>

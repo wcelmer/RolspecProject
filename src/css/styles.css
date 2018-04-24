@@ -26,20 +26,32 @@ h1 {
   min-width: 100%; }
 
 #about {
-  max-width: 950px;
+  max-width: 1000px;
   margin: auto; }
 
 #offer {
-  max-width: 950px;
+  max-width: 1000px;
   margin: auto; }
+
+#places {
+  margin-top: 70px; }
+
+#map {
+  height: 450px;
+  width: 100%; }
+
+#carouselShop {
+  max-width: 900px; }
+  #carouselShop img {
+    position: relative;
+    max-height: 490px; }
+
+#seeds, #grounds, #chemics {
+  display: none; }
 
 .main-content {
   padding: 40px;
   padding-top: 9em; }
-
-@media (min-width: 300px) and (max-width: 1024px) {
-  .main-content {
-    padding-top: 14em; } }
 
 .jumbotron {
   height: 100vh; }
@@ -51,16 +63,6 @@ h1 {
     min-height: 210px;
     max-height: 210px;
     max-width: 400px; }
-
-#map {
-  height: 450px;
-  width: 100%; }
-
-#carouselShop {
-  max-width: 900px; }
-  #carouselShop img {
-    position: relative;
-    max-height: 490px; }
 
 .navbar-side {
   height: 100%;
@@ -91,6 +93,14 @@ h1 {
 @media (min-width: 1024px) {
   .navbar-side {
     width: 25%; } }
+
+@media (min-width: 300px) and (max-width: 1024px) {
+  .main-content {
+    padding-top: 14em; } }
+
+@media (min-width: 200px) and (max-width: 450px) {
+  #shops h1, #places h1 {
+    font-size: 6.5vh; } }
 
 .navbar-side-item {
   padding: 1.5rem 0;
@@ -123,7 +133,3 @@ h1 {
   background-color: black;
   opacity: 0.2;
   z-index: 990; }
-
-.panel:target {
-  margin-top: 0%;
-  background-color: #ffcb00; }

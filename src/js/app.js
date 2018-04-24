@@ -20,12 +20,46 @@ $( document ).ready(function() {
   });
 
 
-  // SCROLLING PAGE
+  // NICE TRANSITIONS PAGE AFTER CLICK SIDEBAR NAVS
 
   $("#navbarSide a").click(function() {
     $("html, body").animate({ scrollTop: $($(this).attr('href')).offset().top - 60 }, "slow");
     return false;
   });
+
+  //CHECKING IS ELEMENT IN VIEVPORT
+
+  function isElementInViewport (el) {
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+  //DELEY SHOW DIVS IN #OFFER SECTION
+  let tittle = $('#offer span')
+  let chemics = $('#chemics');
+  let grounds = $('#grounds');
+  let seeds = $('#seeds');
+
+  function slide(el) {
+    el.animate({"left":"100px"}, "slow").animate({"left":"-100px"}, "slow").stop();
+  }
+
+
+  $(window).on('scroll', function () {
+    if (isElementInViewport(tittle) === true) {
+      chemics.delay(500).fadeIn(1500);
+      grounds.delay(2300).fadeIn(1500);
+      seeds.delay(4300).fadeIn(1500);
+    }
+  })
 
 
 

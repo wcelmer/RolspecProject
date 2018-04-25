@@ -20,7 +20,7 @@ $( document ).ready(function() {
   });
 
 
-  // NICE TRANSITIONS PAGE AFTER CLICK SIDEBAR NAVS
+  // NICE TRANSITIONS PAGE AFTER CLICK SIDEBAR LINKS
 
   $("#navbarSide a").click(function() {
     $("html, body").animate({ scrollTop: $($(this).attr('href')).offset().top - 60 }, "slow");
@@ -30,9 +30,11 @@ $( document ).ready(function() {
   //CHECKING IS ELEMENT IN VIEVPORT
 
   function isElementInViewport (el) {
+    //ADD WHEN USE JQUERY
     if (typeof jQuery === "function" && el instanceof jQuery) {
         el = el[0];
     }
+    //
     var rect = el.getBoundingClientRect();
     return (
         rect.top >= 0 &&
@@ -40,28 +42,47 @@ $( document ).ready(function() {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+  }
+
+  // IS ANY PART OF ELEMENT IS IN VIEVPORT
+
+  function isAnyPartOfElementInViewport(el) {
+
+    //ADD WHEN USE JQUERY
+
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    const rect = el.getBoundingClientRect();
+    // DOMRect { x: 8, y: 8, width: 100, height: 100, top: 8, right: 108, bottom: 108, left: 8 }
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    // http://stackoverflow.com/questions/325933/determine-whether-two-date-ranges-overlap
+    const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+    const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+    return (vertInView && horInView);
 }
 
-  //DELEY SHOW DIVS IN #OFFER SECTION
-  let tittle = $('#offer span')
+  //DELEY SHOW CARDS IN #OFFER SECTION
   let chemics = $('#chemics');
   let grounds = $('#grounds');
   let seeds = $('#seeds');
 
-  function slide(el) {
-    el.animate({"left":"100px"}, "slow").animate({"left":"-100px"}, "slow").stop();
-  }
-
 
   $(window).on('scroll', function () {
-    if (isElementInViewport(tittle) === true) {
-      chemics.delay(500).fadeIn(1500);
-      grounds.delay(2300).fadeIn(1500);
-      seeds.delay(4300).fadeIn(1500);
+    if (isAnyPartOfElementInViewport(chemics) === true) {
+      chemics.fadeTo( 2500, 1 );
+    }
+    if (isAnyPartOfElementInViewport(grounds) === true) {
+      grounds.fadeTo( 4000, 1 );
+    }
+    if (isAnyPartOfElementInViewport(seeds) === true) {
+      seeds.fadeTo( 5500, 1 );
     }
   })
-
-
 
 function initMap() {
         var uluruNedzerzew = {lat: 52.1338361, lng: 19.3058513};
@@ -102,10 +123,6 @@ function initMap() {
 
 
 });
-
-
-
-
 
 
 //

@@ -10,10 +10,10 @@ nav{
   border-bottom: 1px solid $navbar-border-color;
 }
 h1 {
-  font-size: 5vw;
+  font-size: 4vw;
 }
 .big-font{
-  font-size: 9vw;
+  font-size: 8vw;
 }
 .cover {
   background: url(http://www.wypozyczalniaslupca.pl/images/overlay.png);
@@ -24,7 +24,7 @@ h1 {
   background: #242424 url(../img/field-main.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 95vh;
   color: $main-font-color;
   padding: 0px;
   min-width: 100%;
@@ -53,15 +53,12 @@ h1 {
 }
 #seeds, #grounds, #chemics {
 
-  display: none;
+  opacity: 0.2;
 
 }
 .main-content{
   padding: 40px;
   padding-top: 9em;
-}
-.jumbotron {
-  height: 100vh;
 }
 .card{
   border: none;
@@ -106,7 +103,7 @@ h1 {
       width: 25%;
     }
   }
-  @media (min-width: 300px) and (max-width: 1024px) {
+  @media (min-width: 200px) and (max-width: 1024px) {
     .main-content{
       padding-top: 14em;
     }

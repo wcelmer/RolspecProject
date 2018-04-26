@@ -1,4 +1,4 @@
-// Google Maps
+
 $( document ).ready(function() {
     console.log( "ready!" );
 
@@ -83,7 +83,7 @@ $( document ).ready(function() {
       seeds.fadeTo( 5500, 1 );
     }
   })
-
+ // Google Maps
 function initMap() {
         var uluruNedzerzew = {lat: 52.1338361, lng: 19.3058513};
         var uluruWitonia = {lat: 52.146949, lng: 19.294851};
@@ -94,7 +94,7 @@ function initMap() {
           zoom: 12,
           center: uluruDaszyna
         });
-        //Markre's Icon
+        //Marker's Icon
         var florist = '../icons/florist_small.png';
         var home = '../icons/home_big.png';
         var markerNedz = new google.maps.Marker({

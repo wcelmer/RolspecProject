@@ -45,7 +45,7 @@ h1 {
   width: 100%;
 }
 #carouselShop {
-  max-width: 900px;
+  max-width: 1000px;
   img {
     position: relative;
     max-height: 490px;
@@ -108,12 +108,16 @@ h1 {
       padding-top: 14em;
     }
   }
-  @media (min-width: 200px) and (max-width: 450px) {
-    #shops h1, #places h1{
-      font-size: 6.5vh;
+  @media (min-width: 200px) and (max-width: 767px) {
+    #shops > h1, #places h1, #offer>h1{
+      font-size: 6vh;
     }
   }
-
+  @media (max-width: 767px) {
+    .carousel-caption > h1{
+      font-size: 9vw;
+    }
+  }
 .navbar-side-item {
   padding: 1.5rem 0;
   margin: 0;

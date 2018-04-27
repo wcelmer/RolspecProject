@@ -70,6 +70,7 @@ $( document ).ready(function() {
   let chemics = $('#chemics');
   let grounds = $('#grounds');
   let seeds = $('#seeds');
+  let carousel = $('#carouselShop');
 
 
   $(window).on('scroll', function () {
@@ -81,8 +82,51 @@ $( document ).ready(function() {
     }
     if (isAnyPartOfElementInViewport(seeds) === true) {
       seeds.fadeTo( 5500, 1 );
+    }// carouselShop
+    if (isAnyPartOfElementInViewport(carousel) === true) {
+      carousel.fadeTo( 3000, 1 );
     }
-  })
+  });
+
+
+  // Normalize Carousel Heights
+  $.fn.carouselHeights = function() {
+
+    var items = $(this), //grab all slides
+        heights = [], //create empty array to store height values
+        smallest; //create variable to make note of the tallest slide
+
+    var normalizeHeights = function() {
+
+        items.each(function() { //add heights to array
+            heights.push($(this).height());
+        });
+        smallest = Math.min.apply(null, heights); //cache smallest value
+        items.each(function() {
+            $(this).css('max-height',smallest + 'px');
+        });
+    };
+
+    normalizeHeights();
+
+    $(window).on('resize orientationchange', function () {
+        //reset vars
+        smallest = 0;
+        heights.length = 0;
+
+        items.each(function() {
+          let actuallHeight = $(this).height();
+          $(this).css('max-height', actuallHeight * 2 + 'px'); //set max-height
+        });
+        normalizeHeights(); //run it again
+    });
+  };
+
+    $(window).on('load', function(){
+      $('#carouselShop .carousel-item').carouselHeights();
+    });
+
+
  // Google Maps
 function initMap() {
         var uluruNedzerzew = {lat: 52.1338361, lng: 19.3058513};

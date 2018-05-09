@@ -1,4 +1,6 @@
 
+function initMap() {}
+
 $( document ).ready(function() {
     console.log( "ready!" );
 
@@ -128,7 +130,7 @@ $( document ).ready(function() {
 
 
  // Google Maps
-function initMap() {
+initMap = function() {
         var uluruNedzerzew = {lat: 52.1338361, lng: 19.3058513};
         var uluruWitonia = {lat: 52.146949, lng: 19.294851};
         var uluruGrabow = {lat: 52.1270918, lng: 19.0059362};
